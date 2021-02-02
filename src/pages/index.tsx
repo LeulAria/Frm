@@ -1,31 +1,31 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Footer from '@/layout/Footer';
+import Layout from '@/layout/Layout';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout>
+      <>
       <Head>
-        <title>Create Next App</title>
+        <title>TechHawks | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
+      <main className="main">
+        <h1 className="title">
           TecHawks <a>Messege</a>
         </h1>
 
-        <div className={styles.grid}>
+        <div className="grid">
           <Link href="/message">
-            <div className={styles.card}>
+            <div className="card">
               <h3>Start Chatting &rarr;</h3>
             </div>
           </Link>
         </div>
       </main>
-
-      <Footer />
-    </div>
+      </>
+    </Layout>
   );
 }
