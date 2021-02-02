@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Contact from './Contact';
+import { MoreVertical } from 'react-feather'
 
 const ContactList = () => {
   const [showInMob, setShowInMob] = useState(false);
@@ -10,7 +11,7 @@ const ContactList = () => {
         onClick={() => setShowInMob((oldVal) => !oldVal)}
         className="mob-icon"
       >
-        ---
+        <MoreVertical />
       </div>
       <div className="contact-list">
         <div className="contact-list--header">
@@ -27,29 +28,28 @@ const ContactList = () => {
         {`
           .contact-list {
             position: relative;
-            max-height: 100vh;
-            min-height: 100vh;
-            width: 300px;
-            max-width: 400px;
-            overflow: auto;
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
             border: 1px solid #eaeaea;
           }
 
           .contact-list--header {
-            position: -webkit-sticky;
-            position: sticky;
+            position: fixed;
             background: #fff;
             top: 0px;
             left: 0;
-            width: 100%;
-            height: 40px;
-            border-bottom: 1px solid #eaeaea;
+            width: 300px;
+            height: 50px;
+            border: 1px solid #eaeaea;
+            z-index: 200;
           }
 
           .contact-list--container {
             display: flex;
             flex-direction: column;
             min-width: 100%;
+            margin-top: 50px;
           }
 
           .contact-list--title {
@@ -61,18 +61,27 @@ const ContactList = () => {
             display: none;
           }
 
-          @media (max-width: 600px) {
+          @media (max-width: 750px) {
+            .contact-list--header {
+              position: sticky;
+            }
+            .contact-list--container {
+              margin-top: 0;
+            }
             .contact-list {
               position: absolute;
+              top: 0;
               left: ${showInMob ? '0px' : '-1000px'};
               animation: ${showInMob ? 'show 0.4s ease-out' : 'none'};
               transition: all 0.5s;
               background: #fff;
+              z-index: 1000;
             }
             .mob-icon {
+              position: absolute;
               display: block !important;
               display: absolute !important;
-              top: 50px;
+              top: 15px;
               left: 10px;
               z-index: 2000;
             }

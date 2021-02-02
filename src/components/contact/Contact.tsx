@@ -16,11 +16,16 @@ const Contact = () => {
         {`
           .contact-card {
             width: 100%;
-            margin: 5px 0;
-            padding: 5px 1rem;
+            margin: 0;
+            padding: 10px 1rem;
             display: flex;
             align-items: center;
             justify-contecnt: space-evenly;
+            transition: background .4s;
+            cursor: pointer;
+          }
+          .contact-card:hover {
+            background: #efefef;
           }
           .contact--detail {
             margin: 0 1rem;
