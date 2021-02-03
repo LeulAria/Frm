@@ -22,7 +22,9 @@ const MessageInput = () => {
           font-size: 1rem;
           padding: 0 50px 0 1rem;
           border: none !important;
-          border: 1px solid #999 !important;
+          border-radius: 5px;
+          border: 1px solid #ccc !important;
+          box-shadow: 0 1px 10px rgba(0,0,0,0.2);
           color: #333;
         }
         .send-icon {

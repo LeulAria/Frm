@@ -5,6 +5,45 @@
   font-family: Poppins;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  background: #bbb;
+  border: 0px none #ddd;
+  transition: all .5s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+  transform: scale(1.2) !important;
+
+}
+::-webkit-scrollbar-thumb:active {
+  background: #888;
+  border: 2px solid #888;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  padding-right: 3px;
+  border: 0px none transparent;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: transparent;
+}
+::-webkit-scrollbar-track:active {
+  background: transparent;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 
 html,
 body {

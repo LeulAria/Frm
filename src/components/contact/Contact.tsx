@@ -33,7 +33,7 @@ const Contact = () => {
           }
           .contact--user-name {
             margin: 0;
-            color: #444;
+            color: #272727;
           }
           .contact--message-time, .contact-message-last {
             margin: 0;

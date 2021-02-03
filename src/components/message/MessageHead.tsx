@@ -29,7 +29,7 @@ const MessageHead = () => {
           align-items: center;
           padding: 0 10%;
         }
-        
+
         .message-list--container {
           display: flex;
           flex-direction: column;
@@ -40,7 +40,7 @@ const MessageHead = () => {
         }
 
         .message-user-name {
-          margin:0;
+          margin: 0;
           margin-top: 5px;
           line-height: 10px;
           font-size: 1rem;
@@ -48,8 +48,13 @@ const MessageHead = () => {
         }
         .message-user-status {
           margin: 0;
-          font-size: .7rem;
+          font-size: 0.7rem;
           color: #777;
+        }
+        @media (max-width: 700px) {
+          .message-list--header {
+            padding: 0 20%;
+          }
         }
       `}</style>
     </>
