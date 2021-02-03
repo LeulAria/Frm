@@ -5,10 +5,10 @@ const Contact = () => {
     <>
       <div className="contact-card">
         <Avatar />
-        <p className="contact--detail">
+        <div className="contact--detail">
           <h5 className="contact--user-name">Aria Grande</h5>
           <p className="contact-message-last">Lorem ipsum dolor sit.</p>
-        </p>
+        </div>
         <small className="contact--message-time">22:04</small>
       </div>
 

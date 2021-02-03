@@ -1,15 +1,26 @@
 import MessageInput from './MessageInput';
 import MessageBox from './MessageBox';
+import { useState } from 'react';
 
-const MessageBody = () => {
+type Message = {
+  id: number;
+  msg: string;
+  user: boolean;
+}
 
+type Props = {
+  messages: Message[]
+}
+
+const MessageBody = ({ messages }: Props) => {
+  
   return (
     <>
       <div className="message-body-container">
         <div className="message-body-texts">
 
-          {[...Array(10).keys()].map((m: any) => {
-            return m % 2 == 0 ? <MessageBox /> : <MessageBox pos="right" />;
+          {messages.map((m: any) => {
+            return m.user ? <MessageBox key={m.id} val={m.msg}/> : <MessageBox key={m.id} pos="right" val={m.msg} />;
           })}
 
         </div>

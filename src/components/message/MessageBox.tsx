@@ -1,21 +1,22 @@
 type Props = {
   pos?: string;
+  val: string;
 };
 
-const MessageBox = ({ pos }: Props) => {
+const MessageBox = ({ pos, val }: Props) => {
   return (
     <>
       <div className="message-text">
         {pos == 'right' ? (
-          <p className="msg-text msg-l">
-            This is the message and i love it so much so much
+          <div className="msg-text msg-l">
+            <p>{val}</p> 
             <span className="msg-time">20:00</span>
-          </p>
+          </div>
         ) : (
-          <p className="msg-text msg-r">
-            Second Message changes...
+          <div className="msg-text msg-r">
+            <p>{val}</p>
             <span className="msg-time">20:00</span>
-          </p>
+          </div>
         )}
       </div>
 

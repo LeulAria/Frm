@@ -17,10 +17,10 @@ export default function NotFound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <div className={styles.grid}>
+      <main className="main">
+        <div className="grid">
           <div onClick={goBack}>
-            <div className={styles.card}>
+            <div className="card">
               <h4>Whooops! &nbsp; Page Not Found.</h4>
               <p style={{fontSize: '.9rem'}}>Sorry the page you'r looking for does not exist</p>
 							<small>go back &larr;</small>

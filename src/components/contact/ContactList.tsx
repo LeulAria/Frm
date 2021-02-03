@@ -2,7 +2,11 @@ import { useState } from 'react';
 import Contact from './Contact';
 import { MoreVertical } from 'react-feather'
 
-const ContactList = () => {
+type Props = {
+  toggleShowMsg: () => void;
+}
+
+const ContactList = ({ toggleShowMsg }: Props) => {
   const [showInMob, setShowInMob] = useState(false);
 
   return (
@@ -17,9 +21,9 @@ const ContactList = () => {
         <div className="contact-list--header">
           <h3 className="contact-list--title">Messages</h3>
         </div>
-        <div className="contact-list--container">
-          {[...Array(5).keys()].map((a) => (
-            <Contact />
+        <div className="contact-list--container" onClick={() => toggleShowMsg()}>
+          {[...Array(8).keys()].map((a:any, i: number) => (
+            <Contact key={i} />
           ))}
         </div>
       </div>

@@ -1,16 +1,25 @@
 import Message from '@/components/message/Message';
-import React from 'react';
+import NoMessage from '@/components/NoMessage';
+import { useState } from 'react';
 import ContactList from '../../components/contact/ContactList';
 
 const index = () => {
+  // const { gettitle } = useContext(AppContext) as ContextType;
+
+  const [showMsg, setShowmsg] = useState(false);
+
+  const toggleShowMsg = () => {
+    setShowmsg((old: boolean) => (old = !old));
+  };
+
   return (
     <>
       <div className="message">
         <div className="message-contactlist-block">
-          <ContactList />
+          <ContactList toggleShowMsg={toggleShowMsg} />
         </div>
         <div className="message-body-block">
-          <Message />
+          {showMsg ? <Message /> : <NoMessage />}
         </div>
       </div>
       <style jsx>
@@ -27,9 +36,9 @@ const index = () => {
           .message-body-block {
             flex: 1;
           }
-
           @media (max-width: 750px) {
-            .message, .message-body-block {
+            .message,
+            .message-body-block {
               display: block;
             }
             .message-contactlist-block {
