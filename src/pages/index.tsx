@@ -8,13 +8,13 @@ export default function Home() {
     <Layout>
       <>
       <Head>
-        <title>TechHawks | Home</title>
+        <title>Remedy | Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="main">
         <h1 className="title">
-          TecHawks <a>Messege</a>
+          Remedy <a>Messeging App</a>
         </h1>
 
         <div className="grid">
