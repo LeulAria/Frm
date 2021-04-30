@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className="main">
         <h1 className="title">
-          Remedy <a>Messeging App</a>
+          Remedy <a>Chat</a>
         </h1>
 
         <div className="grid">
