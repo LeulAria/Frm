@@ -1,12 +1,10 @@
 <h1 align="center">
-  TechHawks React Test App
+  Remedy
 </h1>
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=for-the-badge&color=24B36B&labelColor=000000" alt="PRs welcome!" />
-
   <img alt="License" src="https://img.shields.io/github/license/jpedroschmitz/typescript-nextjs-starter?style=for-the-badge&color=24B36B&labelColor=000000">
-
 </p>
 
 <br>
