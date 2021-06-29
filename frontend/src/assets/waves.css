@@ -1,0 +1,75 @@
+.wrapper {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  height: 20px;
+  width: 50px;
+  background: #d7d2ccdd;
+  position: absolute;
+  bottom: 48%;
+  right: -7%;
+  border-radius: 54% 46% 0% 100% / 100% 94% 6% 0%;
+  box-shadow: 0 2px 30px #70777b88;
+}
+
+.wave {
+  opacity: 0.4;
+  position: absolute;
+  top: -50%;
+  left: 20%;
+  background: linear-gradient(to right, #ff00cc, #333399);
+  width: 600px;
+  height: 600px;
+  transform-origin: 50% 48%;
+  border-radius: 40%;
+  margin-right: -250px;
+  margin-bottom: -250px;
+  animation: 6000ms linear infinite reverse drift;
+  z-index: -100;
+}
+
+.wave-three {
+  animation: 5000ms linear infinite drift;
+  opacity: 0.5;
+}
+
+.wave .wave-two {
+  animation: 7000ms linear infinite backwards drift;
+  opacity: .2;
+}
+
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateBubble {
+  0% {
+    margin-top: 10px;
+  }
+
+  100% {
+    margin-top: 900%;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
